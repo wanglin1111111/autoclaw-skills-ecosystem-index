@@ -137,12 +137,14 @@
 
 | 缺口 | 数量 | 说明 |
 |---|---|---|
-| 缺 validate.py | 27/97 | 分母=97 个含 SKILL.md 的非 fork 仓（审计器 v3 口径）；余量全部为集合仓/分支承载/非根 SKILL.md 仓，需按仓定制校验器，不可批量模板补齐（2026-11-21 Batch A 已补 31+2 仓） |
-| 缺 tests/ 双样例 | 33/97 | 同上分母；2026-11-21 两轮补齐 33 仓后，余量为集合仓/分支承载仓（逐仓定制范畴） |
+| 缺 validate.py | 3/84 | 分母=84 个含 SKILL.md 的**非归档**非 fork 仓（审计器 v4 归档感知口径，13 个归档技能仓冻结排除）；余 3 = 治理仓 gate-contract + 快照仓×2（政策豁免，见修订 4） |
+| 缺 tests/ 双样例 | 3/84 | 同 v4 口径；余 3 = 治理仓 + 快照仓×2（政策豁免） |
 | 缺 LICENSE | 6→0 | 6 个技能仓已补 MIT（2026-11-21 本轮补齐） |
 | 缺 README | 4→0 | gate-contract / memhub-kb-ops / verified-anchor-code-notes / web-ui-wallpaper-injection-skill 已补（2026-11-21） |
 
 ## 修订记录
+
+- **2026-11-21（修订 4）**：Round 3 逐仓定制校验器——16 个非归档集合仓装集合扫描器（enterprise 11 技能、autoclaw 18 技能优先，扫描 skills/*/SKILL.md frontmatter，逐技能 PASS/FAIL）+ 2 个域校验器仓按其真实 schema 补域样例（dl-training-testing 六检查、paper-collage 七段/分镜表/语速约束）+ ai-reading-cube-skills 补齐 + install-skills-from-zip 补 README；11 个归档技能仓 fail-closed 确认冻结（403 拒写，正确行为）。终局：非归档 84 技能仓中可补份额全部补完。
 
 - **2026-11-21（修订 3）**：Batch A 批量补齐 31 仓 validate.py+tests 双样例（漏斗分层：根级 SKILL.md 单技能仓全补，7 仓非根级/集合仓排除），补 2 仓 LICENSE；审计器升 v3（readme 标志同时认 README/README.md）后复测——缺 validate.py 27/97、缺双样例 33/97、缺 README 仅 3。
 
